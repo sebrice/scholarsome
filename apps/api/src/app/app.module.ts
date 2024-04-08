@@ -21,6 +21,9 @@ import { TokenRefreshMiddleware } from "./providers/token-refresh.middleware";
 import { ConvertingModule } from "./converting/converting.module";
 import { StorageModule } from "./providers/storage/storage.module";
 import { FoldersModule } from "./folders/folders.module";
+import { ScheduleModule } from "@nestjs/schedule";
+import { TasksService } from "./providers/tasks.service";
+import { NoIndexMiddleware } from "./providers/no-index.middleware";
 
 @Module({
   imports: [
@@ -30,7 +33,7 @@ import { FoldersModule } from "./folders/folders.module";
         cacheControl: true,
         maxAge: 31536000
       },
-      exclude: ["/api/(.*)", "/handbook/(.*)"]
+      exclude: ["/api/(.*)", "/handbook/(.*)", "/sitemaps/(.*)", "/sitemap.xml"]
     }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, "..", "docs"),
@@ -38,6 +41,24 @@ import { FoldersModule } from "./folders/folders.module";
       serveStaticOptions: {
         cacheControl: true,
         maxAge: 31536000
+      }
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, "..", "..", "sitemaps"),
+      serveRoot: "/sitemaps",
+      serveStaticOptions: {
+        index: false,
+        cacheControl: true,
+        maxAge: 0
+      }
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, "..", "..", "sitemaps", "sitemap.xml"),
+      serveRoot: "/sitemap.xml",
+      serveStaticOptions: {
+        index: false,
+        cacheControl: true,
+        maxAge: 0
       }
     }),
     ConfigModule.forRoot({
@@ -64,6 +85,7 @@ import { FoldersModule } from "./folders/folders.module";
         ]
       })
     }),
+    ScheduleModule.forRoot(),
     AuthModule,
     DatabaseModule,
     SetsModule,
@@ -86,7 +108,7 @@ import { FoldersModule } from "./folders/folders.module";
     FoldersModule
   ],
   controllers: [],
-  providers: [],
+  providers: [TasksService],
   exports: [JwtModule]
 })
 export class AppModule implements NestModule {
@@ -105,6 +127,12 @@ export class AppModule implements NestModule {
 
     consumer
         .apply(TokenRefreshMiddleware)
+        .forRoutes({ path: "*", method: RequestMethod.ALL });
+
+    // this logic for whether this middleware is bound should be done in the .forRoutes call
+    // however the path specifier isn't working, so the middleware itself checks whether to add the header
+    consumer
+        .apply(NoIndexMiddleware)
         .forRoutes({ path: "*", method: RequestMethod.ALL });
   }
 }
