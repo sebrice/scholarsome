@@ -49,11 +49,12 @@ async function bootstrap() {
     app.use(helmet({
       contentSecurityPolicy: {
         directives: {
-          "script-src": ["'self'", "'unsafe-eval'", "'unsafe-inline'", "blob:", "https://www.gstatic.com", "https://www.google.com", "https://googletagmanager.com"],
-          "img-src": ["'self'", "blob:", "data:", "https://cdn.redoc.ly"],
+          "script-src": ["'self'", "'unsafe-eval'", "'unsafe-inline'", "blob:", "https://www.gstatic.com", "https://www.google.com", "https://www.googletagmanager.com", "https://www.google-analytics.com", "https://ssl.google-analytics.com"],
+          "img-src": ["'self'", "blob:", "data:", "https://cdn.redoc.ly", "https://www.google-analytics.com"],
           "script-src-attr": ["'unsafe-inline'"],
-          "default-src": ["'self'", "https://api.github.com/", "https://google-analytics.com"],
-          "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com/"]
+          "default-src": ["'self'", "https://api.github.com", "https://google-analytics.com"],
+          "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com/"],
+          "connect-src": ["'self'", "https://www.google-analytics.com", "https://api.github.com"]
         }
       }
     }));
