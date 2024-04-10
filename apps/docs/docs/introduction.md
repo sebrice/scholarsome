@@ -1,33 +1,33 @@
 ---
 sidebar_position: 1
 hide_title: true
-title: Introduction
+title: Introducción
 slug: /
 ---
 
 ![](/img/logo.svg)
 
-Welcome to the Scholarsome handbook!
+Bienvenido al manual de usuario de Scholarsome!
 
-🎓 Scholarsome is an open-source studying platform.
+🎓 Scholarsome es una plataforma de estudio de código abierto.
 
-💸️ It's designed to replace existing options that are closed-source and lock critical features behind paywalls.
+💸️ Está diseñada para reemplazar las opciones existentes que son de código cerrado y bloquean funciones críticas detrás de muros de pago.
 
-📱 It's accessible from any device in a centralized, easy-to-use, web-based location.
+📱 Es accesible desde cualquier dispositivo a través de un sitio web centralizado y fácil de usar.
 
-🛠 With the ability to create study sets, import data from other platforms, take generated practice quizzes to test your knowledge, study using flashcards, and much more, it's now possible to break free from the grasps of monthly subscriptions .
+🛠 Con la habilidad de crear sets, importar información desde otras plataformas, generar cuestionarios de práctica para evaluar sus conocimientos, utilizar tarjetas didácticas y mucho más, ahora es posible deshacerse de las suscripciones mensuales.
 
-## Table of Contents
+## Tabla de contenidos
 
-Looking for where to go? You're in the right place.
+¿Buscas adónde ir? Estás en el lugar correcto.
 
-- [Project Information](/project-information/about)
-  - Information about the project, the license, and more.
-- [Usage](/usage/overview.md)
-  - Learn how to use the features Scholarsome.
-- [Installation](/installation/prerequisites)
-  - Guides about how to install and manage a self-hosted instance of Scholarsome on your own hardware.
-- [Development](/development/development-guide)
-  - Learn how to contribute to Scholarsome by setting up a local server and learning about the design architecture
+- [Información del Proyecto](/project-information/about)
+  - Información acerca del proyecto, licencias y más.
+- [Uso](/usage/overview.md)
+  - Aprende a utilizar las funciones de Scholarsome.
+- [Instalación](/installation/prerequisites)
+  - Guías acerca de cómo instalar y administrar una instancia de Scholarsome alojada en su propio hardware.
+- [Desarrollo](/development/development-guide)
+  - Aprenda cómo contribuir a Scholarsome configurando un servidor local y aprendiendo sobre la arquitectura de diseño.
 - [API](/api)
-  - Developer documentation for the Scholarsome API
+  - Documentación para desarrolladores acerca de la API Scholarsome.
