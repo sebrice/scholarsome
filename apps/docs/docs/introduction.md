@@ -24,7 +24,7 @@ Bienvenido al manual de usuario de Scholarsome!
 - [Información del Proyecto](/project-information/about)
   - Información acerca del proyecto, licencias y más.
 - [Uso](/usage/overview.md)
-  - Aprende a utilizar las funciones de Scholarsome.
+  - Aprenda a utilizar las funciones de Scholarsome.
 - [Instalación](/installation/prerequisites)
   - Guías acerca de cómo instalar y administrar una instancia de Scholarsome alojada en su propio hardware.
 - [Desarrollo](/development/development-guide)
