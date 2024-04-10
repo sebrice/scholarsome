@@ -15,7 +15,7 @@ Bienvenido al manual de usuario de Scholarsome!
 
 📱 Es accesible desde cualquier dispositivo a través de un sitio web centralizado y fácil de usar.
 
-🛠 Con la habilidad de crear sets, importar información desde otras plataformas, generar cuestionarios de práctica para evaluar sus conocimientos, utilizar tarjetas didácticas y mucho más, ahora es posible deshacerse de las suscripciones mensuales.
+🛠 Con la habilidad de crear sets, importar información desde otras plataformas, generar cuestionarios de práctica para evaluar sus conocimientos, utilizar tarjetas didácticas y mucho más, es posible deshacerse de las suscripciones mensuales.
 
 ## Tabla de contenidos
 
