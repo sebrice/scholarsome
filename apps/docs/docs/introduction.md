@@ -28,6 +28,6 @@ Bienvenido al manual de usuario de Scholarsome!
 - [Instalación](/installation/prerequisites)
   - Guías acerca de cómo instalar y administrar una instancia de Scholarsome alojada en su propio hardware.
 - [Desarrollo](/development/development-guide)
-  - Aprenda cómo contribuir a Scholarsome configurando un servidor local y aprendiendo sobre la arquitectura de diseño.
+  - Aprenda cómo contribuir a Scholarsome configurando un servidor local y conociendo la arquitectura de diseño.
 - [API](/api)
   - Documentación para desarrolladores acerca de la API Scholarsome.
